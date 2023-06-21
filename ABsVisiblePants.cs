@@ -409,25 +409,6 @@ namespace ABsVisiblePants
                     }
                 }
             }
-            if (!AVPSettings.IsPants.NullOrEmpty())
-            {
-                List<string> list = new List<string>();
-                foreach (string x in AVPSettings.IsPants.Keys)
-                {
-                    if (DefDatabase<ThingDef>.GetNamedSilentFail(x) == null)
-                    {
-                        list.Add(x);
-                    }
-                }
-                if (!list.NullOrEmpty())
-                {
-                    foreach (string x in list)
-                    {
-                        AVPSettings.IsPants.Remove(x);
-                    }
-
-                }
-            }
         }
 
 
